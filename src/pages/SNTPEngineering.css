@@ -1,0 +1,4782 @@
+/* ========================================
+   SNTP ENGINEERING - PALETTE SNTP UNIFORME
+======================================== */
+
+:root {
+  /* Palette SNTP Officielle */
+  --sntp-red-darker: #5A000D;
+  --sntp-red-dark: #810012;
+  --sntp-red: #C1121F;
+  --sntp-red-light: #D32F2F;
+  
+  --sntp-black: #200404;
+  --sntp-gray-darkest: #201d1d;
+  --sntp-gray-dark: #433f3f;
+  --sntp-gray: #6c7177;
+  --sntp-gray-light: #a5a9ae;
+  --sntp-gray-lighter: #E0E1DD;
+  --sntp-gray-lightest: #F5F5F5;
+  
+  --sntp-white: #FFFFFF;
+  --sntp-text-dark: #2C2C2C;
+
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.2);
+  --font-main: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Helvetica Neue', sans-serif;
+  --font-heading: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+.SNTPEngineering-page {
+  font-family: var(--font-main);
+  color: var(--sntp-text-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+  background: var(--sntp-white);
+  max-width: 100vw;
+}
+
+/* ==================== HERO SECTION ==================== */
+.SNTPEngineering-hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: center;
+  padding: 120px 20px 80px;
+  overflow: hidden;
+}
+
+.SNTPEngineering-hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.SNTPEngineering-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(13, 27, 42, 0.85) 0%, rgba(13, 27, 42, 0.9) 40%, rgba(193, 18, 31, 0.25) 100%);
+  z-index: 1;
+}
+
+.SNTPEngineering-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+.SNTPEngineering-hero-logo {
+  margin-bottom: 40px;
+  animation: zoomIn 1s ease-out;
+}
+
+.SNTPEngineering-hero-logo img {
+  max-width: 200px;
+  height: auto;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+}
+
+.SNTPEngineering-hero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 900;
+  color: var(--sntp-white);
+  margin-bottom: 25px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.5);
+  line-height: 1.1;
+}
+
+.SNTPEngineering-hero-subtitle {
+  font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+  color: var(--sntp-white);
+  margin-bottom: 35px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.SNTPEngineering-hero-subtitle .highlight-text {
+  color: var(--sntp-red);
+  font-weight: 700;
+  text-shadow: 2px 2px 8px rgba(193, 18, 31, 0.6);
+}
+
+.SNTPEngineering-hero-description {
+  font-size: clamp(0.95rem, 1.6vw, 1.2rem);
+  color: rgba(255, 255, 255, 0.95);
+  max-width: 950px;
+  margin: 0 auto;
+  line-height: 1.9;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  padding: 0 15px;
+}
+
+.SNTPEngineering-hero-description .bold-text {
+  font-weight: 700;
+  color: var(--sntp-white);
+}
+
+/* ==================== MAIN TITLE SECTION ==================== */
+.SNTPEngineering-main-title-section {
+  padding: 80px 20px 70px;
+  background: linear-gradient(180deg, var(--sntp-black) 0%, #000000 100%);
+  text-align: center;
+  border-bottom: 1px solid rgba(193, 18, 31, 0.3);
+}
+
+.SNTPEngineering-section-main-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  color: var(--sntp-red-darker);
+  margin-bottom: 20px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.SNTPEngineering-section-subtitle {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  color: var(--sntp-white);
+  margin-bottom: 25px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.SNTPEngineering-title-underline {
+  width: 100px;
+  height: 3px;
+  background: var(--sntp-red);
+  margin: 0 auto 30px;
+}
+
+.SNTPEngineering-section-intro-text {
+  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 850px;
+  margin: 0 auto;
+  font-style: italic;
+  line-height: 1.7;
+  padding: 0 20px;
+}
+
+/* ==================== DOMAINS SECTION ==================== */
+.SNTPEngineering-domains-section {
+  padding: 90px 20px;
+  background: var(--sntp-gray-lightest);
+}
+
+.SNTPEngineering-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.SNTPEngineering-domains-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 45px;
+  margin-top: 50px;
+}
+
+.SNTPEngineering-domain-card {
+  background: var(--sntp-white);
+  padding: 45px 35px;
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  border-left: 5px solid var(--sntp-red);
+  position: relative;
+  overflow: hidden;
+}
+
+.SNTPEngineering-domain-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, var(--sntp-red), var(--sntp-red-dark));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.SNTPEngineering-domain-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+  border-left-width: 5px;
+}
+
+.SNTPEngineering-domain-card:hover::before {
+  transform: scaleX(1);
+}
+
+.SNTPEngineering-domain-icon {
+  width: 75px;
+  height: 75px;
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--sntp-red), var(--sntp-red-dark));
+  border-radius: 50%;
+  padding: 18px;
+  box-shadow: 0 4px 12px rgba(193, 18, 31, 0.3);
+  transition: var(--transition);
+}
+
+.SNTPEngineering-domain-card:hover .SNTPEngineering-domain-icon {
+  transform: rotate(360deg) scale(1.1);
+  box-shadow: 0 6px 16px rgba(193, 18, 31, 0.5);
+}
+
+.SNTPEngineering-domain-icon img {
+  width: 100%;
+  height: 100%;
+  filter: brightness(0) invert(1);
+}
+
+.SNTPEngineering-domain-title {
+  font-size: 1.6rem;
+  color: var(--sntp-text-dark);
+  margin-bottom: 22px;
+  font-weight: 800;
+  line-height: 1.3;
+  font-family: var(--font-heading);
+}
+
+.SNTPEngineering-domain-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.SNTPEngineering-domain-list li {
+  padding: 12px 0 12px 35px;
+  position: relative;
+  color: var(--sntp-gray-dark);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  transition: var(--transition);
+}
+
+.SNTPEngineering-domain-list li:hover {
+  color: var(--sntp-text-dark);
+  padding-left: 40px;
+}
+
+.SNTPEngineering-domain-list li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--sntp-red);
+  font-size: 1.4rem;
+  font-weight: bold;
+  transition: var(--transition);
+}
+
+.SNTPEngineering-domain-list li:hover::before {
+  left: 5px;
+  transform: scale(1.2);
+}
+
+.SNTPEngineering-domain-innovation {
+  margin-top: 25px;
+  padding: 18px 20px;
+  background: linear-gradient(135deg, #ffe8e8, #fff0f0);
+  border-left: 4px solid var(--sntp-red);
+  border-radius: 6px;
+  font-size: 1rem;
+  color: var(--sntp-text-dark);
+  box-shadow: var(--shadow-sm);
+}
+
+.SNTPEngineering-domain-innovation strong {
+  color: var(--sntp-red);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+
+/* ==================== SOLUTIONS SECTION ==================== */
+.SNTPEngineering-solutions-section {
+  padding: 110px 20px;
+  background: linear-gradient(135deg, var(--sntp-black) 0%, #0d0d0d 40%, var(--sntp-red-dark) 100%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.SNTPEngineering-solutions-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><circle cx="2" cy="2" r="1" fill="rgba(255,255,255,0.05)"/></svg>') repeat;
+  background-size: 20px 20px;
+  opacity: 0.5;
+}
+
+.SNTPEngineering-solutions-title {
+  font-size: clamp(2rem, 3.8vw, 3.2rem);
+  color: var(--sntp-white);
+  max-width: 950px;
+  margin: 0 auto 50px;
+  font-weight: 800;
+  line-height: 1.35;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+/* ==================== VALUES SECTION ==================== */
+.SNTPEngineering-values-section {
+  padding: 90px 20px;
+  background: var(--sntp-white);
+}
+
+.SNTPEngineering-values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 35px;
+  margin-top: 50px;
+}
+
+.SNTPEngineering-value-card {
+  text-align: center;
+  padding: 45px 30px;
+  background: var(--sntp-gray-lightest);
+  border-radius: 12px;
+  transition: var(--transition);
+  border-top: 4px solid var(--sntp-red);
+  position: relative;
+  overflow: hidden;
+}
+
+.SNTPEngineering-value-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 4px;
+  background: var(--sntp-red-dark);
+  transition: all 0.4s ease;
+  transform: translateX(-50%);
+}
+
+.SNTPEngineering-value-card:hover::before {
+  width: 100%;
+}
+
+.SNTPEngineering-value-card:hover {
+  background: linear-gradient(135deg, #fff 0%, #f9f9f9 100%);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-8px);
+}
+
+.SNTPEngineering-value-title {
+  font-size: 1.5rem;
+  color: var(--sntp-text-dark);
+  margin-bottom: 18px;
+  font-weight: 800;
+  font-family: var(--font-heading);
+}
+
+.SNTPEngineering-value-description {
+  font-size: 1.05rem;
+  color: var(--sntp-gray-dark);
+  line-height: 1.8;
+  font-style: italic;
+}
+
+/* ==================== TRANSFORM SECTION ==================== */
+.SNTPEngineering-transform-section {
+  padding: 110px 20px;
+  background: linear-gradient(180deg, var(--sntp-black) 0%, #000000 60%, #2a2a2a 100%);
+  text-align: center;
+  position: relative;
+}
+
+.SNTPEngineering-transform-subtitle {
+  font-size: 1.3rem;
+  color: var(--sntp-red);
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.SNTPEngineering-transform-title {
+  font-size: clamp(2.2rem, 4.2vw, 3.6rem);
+  color: var(--sntp-white);
+  margin-bottom: 35px;
+  font-weight: 800;
+  line-height: 1.2;
+  font-family: var(--font-heading);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.SNTPEngineering-transform-description {
+  font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 900px;
+  margin: 0 auto 50px;
+  line-height: 1.9;
+  padding: 0 20px;
+}
+
+.SNTPEngineering-transform-description strong {
+  color: var(--sntp-white);
+  font-weight: 800;
+}
+
+/* ==================== TEAM SECTION ==================== */
+.SNTPEngineering-team-section {
+  padding: 90px 20px;
+  background: var(--sntp-white);
+}
+
+.SNTPEngineering-team-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 70px;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.SNTPEngineering-team-text {
+  padding: 25px;
+}
+
+.SNTPEngineering-team-title {
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  color: var(--sntp-text-dark);
+  margin-bottom: 30px;
+  font-weight: 800;
+  line-height: 1.25;
+  font-family: var(--font-heading);
+}
+
+.SNTPEngineering-team-description {
+  font-size: 1.15rem;
+  color: var(--sntp-gray-dark);
+  line-height: 1.9;
+}
+
+.SNTPEngineering-team-description strong {
+  color: var(--sntp-text-dark);
+  font-weight: 800;
+}
+
+.SNTPEngineering-team-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: var(--shadow-lg);
+  border: 4px solid var(--sntp-red);
+}
+
+.SNTPEngineering-team-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, transparent 0%, rgba(193, 18, 31, 0.1) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.SNTPEngineering-team-image:hover::after {
+  opacity: 1;
+}
+
+.SNTPEngineering-team-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: var(--transition);
+}
+
+.SNTPEngineering-team-image:hover img {
+  transform: scale(1.08);
+}
+
+/* ==================== ENGINEERS SECTION ==================== */
+.SNTPEngineering-engineers-section {
+  padding: 110px 20px;
+  background: linear-gradient(135deg, var(--sntp-black) 0%, #0d0d0d 60%, #2a2a2a 100%);
+  position: relative;
+}
+
+.SNTPEngineering-engineers-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 70px;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.SNTPEngineering-engineers-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: var(--shadow-lg);
+  border: 4px solid var(--sntp-red);
+}
+
+.SNTPEngineering-engineers-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, transparent 0%, rgba(193, 18, 31, 0.15) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.SNTPEngineering-engineers-image:hover::after {
+  opacity: 1;
+}
+
+.SNTPEngineering-engineers-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: var(--transition);
+}
+
+.SNTPEngineering-engineers-image:hover img {
+  transform: scale(1.08);
+}
+
+.SNTPEngineering-engineers-info {
+  padding: 25px;
+  color: var(--sntp-white);
+}
+
+.SNTPEngineering-engineers-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--sntp-red), var(--sntp-red-dark));
+  color: white;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 12px rgba(193, 18, 31, 0.4);
+  transition: var(--transition);
+}
+
+.SNTPEngineering-engineers-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(193, 18, 31, 0.6);
+}
+
+.SNTPEngineering-engineers-quote {
+  font-size: 1.4rem;
+  font-style: italic;
+  margin-bottom: 35px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 400;
+}
+
+.SNTPEngineering-engineers-subtitle {
+  font-size: 1.05rem;
+  color: var(--sntp-red);
+  margin-bottom: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.SNTPEngineering-engineers-title {
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  margin-bottom: 30px;
+  font-weight: 800;
+  font-family: var(--font-heading);
+}
+
+.SNTPEngineering-engineers-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 35px;
+}
+
+.SNTPEngineering-engineers-list li {
+  padding: 14px 0 14px 35px;
+  position: relative;
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.95);
+  transition: var(--transition);
+}
+
+.SNTPEngineering-engineers-list li:hover {
+  padding-left: 40px;
+  color: var(--sntp-white);
+}
+
+.SNTPEngineering-engineers-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--sntp-red);
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: var(--transition);
+}
+
+.SNTPEngineering-engineers-list li:hover::before {
+  transform: scale(1.2);
+}
+
+/* ==================== CONTACT SECTION ==================== */
+.SNTPEngineering-contact-section {
+  padding: 90px 20px;
+  background: var(--sntp-gray-lightest);
+  text-align: center;
+}
+
+.SNTPEngineering-contact-title {
+  font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+  color: var(--sntp-text-dark);
+  margin-bottom: 60px;
+  font-weight: 800;
+  font-family: var(--font-heading);
+}
+
+.SNTPEngineering-contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.SNTPEngineering-contact-map-container {
+  position: relative;
+  width: 100%;
+  height: 550px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 4px solid var(--sntp-red);
+}
+
+.SNTPEngineering-google-map {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: brightness(1.1) contrast(0.95) saturate(0.43);
+  transition: filter 0.3s ease;
+}
+
+.SNTPEngineering-contact-map-container:hover .SNTPEngineering-google-map {
+  filter: brightness(1) contrast(1) saturate(1);
+}
+
+.SNTPEngineering-contact-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  text-align: left;
+  align-items: stretch;
+}
+
+.SNTPEngineering-contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.SNTPEngineering-contact-item {
+  background: var(--sntp-white);
+  padding: 35px 30px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  border-left: 4px solid var(--sntp-red);
+}
+
+.SNTPEngineering-contact-item:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateX(5px);
+  border-left-width: 6px;
+}
+
+.SNTPEngineering-contact-label {
+  font-size: 1.3rem;
+  color: var(--sntp-red);
+  margin-bottom: 15px;
+  font-weight: 800;
+  font-family: var(--font-heading);
+}
+
+.SNTPEngineering-contact-info {
+  font-size: 1.15rem;
+  color: var(--sntp-text-dark);
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.SNTPEngineering-contact-info a {
+  color: var(--sntp-text-dark);
+  text-decoration: none;
+  transition: var(--transition);
+  font-weight: 700;
+  position: relative;
+}
+
+.SNTPEngineering-contact-info a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--sntp-red);
+  transition: width 0.3s ease;
+}
+
+.SNTPEngineering-contact-info a:hover {
+  color: var(--sntp-red);
+}
+
+.SNTPEngineering-contact-info a:hover::after {
+  width: 100%;
+}
+
+.SNTPEngineering-map-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 0 auto;
+}
+
+.SNTPEngineering-map-button .button-icon {
+  fill: currentColor;
+}
+
+.SNTPEngineering-contact-cta-text {
+  font-size: 1.1rem;
+  color: var(--sntp-gray-dark);
+  line-height: 1.9;
+  padding: 25px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  margin: 0 auto;
+  display: flex;
+  width: fit-content;
+}
+
+.SNTPEngineering-contact-cta-text strong {
+  color: var(--sntp-text-dark);
+  font-weight: 800;
+}
+
+/* ==================== BUTTONS ==================== */
+.SNTPEngineering-cta-button {
+  display: inline-block;
+  padding: 18px 45px;
+  font-size: 1.15rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+  box-shadow: var(--shadow-md);
+  font-family: var(--font-heading);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  margin: 0 auto;
+  display: flex;
+  width: fit-content;
+}
+
+.SNTPEngineering-cta-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.5s ease, height 0.5s ease;
+  z-index: -1;
+}
+
+.SNTPEngineering-cta-button:hover::before {
+  width: 400px;
+  height: 400px;
+}
+
+.SNTPEngineering-primary-button {
+  background: linear-gradient(135deg, var(--sntp-red), var(--sntp-red-dark));
+  color: white;
+}
+
+.SNTPEngineering-primary-button:hover {
+  background: linear-gradient(135deg, var(--sntp-red-dark), var(--sntp-red));
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(193, 18, 31, 0.4);
+}
+
+.SNTPEngineering-secondary-button {
+  background: linear-gradient(135deg, white, var(--sntp-gray-lightest));
+  color: var(--sntp-text-dark);
+  border: 3px solid white;
+}
+
+.SNTPEngineering-secondary-button:hover {
+  background: linear-gradient(135deg, var(--sntp-gray-lightest), white);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  color: var(--sntp-red);
+}
+
+/* ==================== ANIMATIONS ==================== */
+.SNTPEngineering-fade-in-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.SNTPEngineering-fade-in-section.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 1200px) {
+  .SNTPEngineering-domains-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
+  }
+
+  .SNTPEngineering-container {
+    padding: 0 15px;
+  }
+
+  .SNTPEngineering-contact-layout {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .SNTPEngineering-contact-map-container {
+    height: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .SNTPEngineering-hero-section {
+    min-height: 70vh;
+    padding: 80px 20px 60px;
+    background-attachment: scroll;
+  }
+
+  .SNTPEngineering-domains-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .SNTPEngineering-team-content,
+  .SNTPEngineering-engineers-content {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .SNTPEngineering-values-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .SNTPEngineering-contact-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .SNTPEngineering-contact-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .SNTPEngineering-contact-map-container {
+    height: 400px;
+  }
+
+  .SNTPEngineering-contact-info-wrapper {
+    text-align: center;
+  }
+
+  .SNTPEngineering-contact-item {
+    text-align: center;
+    border-left: none;
+    border-top: 4px solid var(--sntp-red);
+  }
+
+  .SNTPEngineering-contact-item:hover {
+    transform: translateY(-5px);
+    transform: translateX(0);
+  }
+
+  .SNTPEngineering-section-main-title {
+    font-size: 2.2rem;
+  }
+
+  .SNTPEngineering-domain-card {
+    padding: 35px 25px;
+  }
+
+  .SNTPEngineering-hero-logo img {
+    max-width: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .SNTPEngineering-hero-logo img {
+    max-width: 160px;
+  }
+
+  .SNTPEngineering-cta-button {
+    padding: 15px 35px;
+    font-size: 1rem;
+  }
+
+  .SNTPEngineering-domain-icon {
+    width: 65px;
+    height: 65px;
+  }
+
+  .SNTPEngineering-hero-section {
+    min-height: 75vh;
+    padding: 70px 15px 50px;
+  }
+
+  .SNTPEngineering-main-title-section {
+    padding: 70px 15px 50px;
+  }
+
+  .SNTPEngineering-domains-section,
+  .SNTPEngineering-values-section,
+  .SNTPEngineering-team-section {
+    padding: 70px 15px;
+  }
+
+  .SNTPEngineering-solutions-section,
+  .SNTPEngineering-transform-section,
+  .SNTPEngineering-engineers-section {
+    padding: 90px 15px;
+  }
+
+  .SNTPEngineering-contact-map-container {
+    height: 350px;
+  }
+}
+
+/* ==================== PRINT & ACCESSIBILITY ==================== */
+@media print {
+  .SNTPEngineering-hero-section,
+  .SNTPEngineering-cta-button,
+  .SNTPEngineering-google-map {
+    display: none !important;
+  }
+
+  .SNTPEngineering-page {
+    background: white !important;
+    color: black !important;
+  }
+
+  * {
+    box-shadow: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.SNTPEngineering-cta-button:focus,
+.SNTPEngineering-contact-info a:focus {
+  outline: 3px solid var(--sntp-red);
+  outline-offset: 3px;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--sntp-red);
+  color: var(--sntp-white);
+}
+
+/* Focus states */
+*:focus-visible {
+  outline: 2px solid var(--sntp-red);
+  outline-offset: 2px;
+}
+
+/* ==================== NOTRE EXPERTISE - DESIGN MODERNE ==================== */
+
+.SNTPEngineering-expertise-modern-section {
+  padding: 120px 40px;
+  background: linear-gradient(180deg, var(--sntp-white) 0%, #FAFAFA 50%, var(--sntp-gray-lighter) 100%);
+  position: relative;
+}
+
+/* Header */
+.SNTPEngineering-expertise-modern-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.SNTPEngineering-expertise-modern-title {
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  color: var(--sntp-black);
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  position: relative;
+  display: inline-block;
+}
+
+.SNTPEngineering-expertise-modern-title::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--sntp-red), transparent);
+}
+
+.SNTPEngineering-expertise-modern-underline {
+  width: 150px;
+  height: 5px;
+  background: linear-gradient(90deg, var(--sntp-red), var(--sntp-red-dark));
+  margin: 0 auto;
+  border-radius: 3px;
+  box-shadow: 0 4px 15px rgba(193, 18, 31, 0.4);
+}
+
+/* ==================== CONCEPTION & INGÉNIERIE - HERO ==================== */
+
+.SNTPEngineering-expertise-hero {
+  background: linear-gradient(135deg, var(--sntp-black) 0%, var(--sntp-gray-dark) 100%);
+  padding: 60px 50px;
+  border-radius: 25px;
+  margin-bottom: 80px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  border: 3px solid var(--sntp-red);
+}
+
+.SNTPEngineering-expertise-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(193, 18, 31, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.SNTPEngineering-expertise-hero-badge {
+  width: 80px;
+  height: 80px;
+  background: var(--sntp-red);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(193, 18, 31, 0.5);
+  transition: all 0.3s ease;
+}
+
+.SNTPEngineering-expertise-hero:hover .SNTPEngineering-expertise-hero-badge {
+  transform: rotate(10deg) scale(1.05);
+}
+
+.SNTPEngineering-expertise-hero-badge svg {
+  color: var(--sntp-white);
+}
+
+.SNTPEngineering-expertise-hero-title {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  color: var(--sntp-white);
+  font-weight: 800;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.SNTPEngineering-expertise-hero-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.SNTPEngineering-expertise-hero-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 20px 25px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border-left: 4px solid var(--sntp-red);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.SNTPEngineering-expertise-hero-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateX(8px);
+  border-left-width: 6px;
+}
+
+.SNTPEngineering-expertise-hero-dot {
+  width: 12px;
+  height: 12px;
+  background: var(--sntp-red);
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 0 15px rgba(193, 18, 31, 0.8);
+  animation: pulse 2s infinite;
+}
+
+.SNTPEngineering-expertise-hero-item span {
+  color: var(--sntp-white);
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(193, 18, 31, 0.8);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(193, 18, 31, 1);
+  }
+}
+
+/* ==================== COMPÉTENCES CLÉS ==================== */
+
+.SNTPEngineering-expertise-skills-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.SNTPEngineering-expertise-skills-title {
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  color: var(--sntp-black);
+  font-weight: 800;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.SNTPEngineering-expertise-skills-line {
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--sntp-red), var(--sntp-red-dark));
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.SNTPEngineering-expertise-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 35px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ==================== SKILL CARDS ==================== */
+
+.SNTPEngineering-expertise-skill-card {
+  background: var(--sntp-white);
+  padding: 45px 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--sntp-gray-lighter);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.SNTPEngineering-expertise-skill-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, var(--sntp-red), var(--sntp-red-dark));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.SNTPEngineering-expertise-skill-card:hover::before {
+  transform: scaleX(1);
+}
+
+.SNTPEngineering-expertise-skill-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+  border-color: var(--sntp-red);
+}
+
+.SNTPEngineering-expertise-skill-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, var(--sntp-gray-lighter), var(--sntp-gray-light));
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.SNTPEngineering-expertise-skill-card:hover .SNTPEngineering-expertise-skill-icon {
+  background: linear-gradient(135deg, var(--sntp-red), var(--sntp-red-dark));
+  transform: rotate(-5deg) scale(1.08);
+  box-shadow: 0 8px 25px rgba(193, 18, 31, 0.4);
+}
+
+.SNTPEngineering-expertise-skill-icon svg {
+  color: var(--sntp-black);
+  transition: color 0.3s ease;
+}
+
+.SNTPEngineering-expertise-skill-card:hover .SNTPEngineering-expertise-skill-icon svg {
+  color: var(--sntp-white);
+}
+
+.SNTPEngineering-expertise-skill-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.SNTPEngineering-expertise-skill-list li {
+  padding: 16px 0 16px 30px;
+  position: relative;
+  color: var(--sntp-gray-dark);
+  font-size: 1.08rem;
+  line-height: 1.6;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid var(--sntp-gray-lighter);
+}
+
+.SNTPEngineering-expertise-skill-list li:last-child {
+  border-bottom: none;
+}
+
+.SNTPEngineering-expertise-skill-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background: var(--sntp-red);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.SNTPEngineering-expertise-skill-list li:hover {
+  padding-left: 38px;
+  color: var(--sntp-black);
+}
+
+.SNTPEngineering-expertise-skill-list li:hover::before {
+  width: 14px;
+  height: 14px;
+  box-shadow: 0 0 15px rgba(193, 18, 31, 0.8);
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width: 1024px) {
+  .SNTPEngineering-expertise-skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+  }
+
+  .SNTPEngineering-expertise-hero-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .SNTPEngineering-expertise-modern-section {
+    padding: 80px 20px;
+  }
+
+  .SNTPEngineering-expertise-modern-header {
+    margin-bottom: 60px;
+  }
+
+  .SNTPEngineering-expertise-hero {
+    padding: 45px 30px;
+    margin-bottom: 60px;
+  }
+
+  .SNTPEngineering-expertise-hero-badge {
+    width: 65px;
+    height: 65px;
+  }
+
+  .SNTPEngineering-expertise-hero-badge svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .SNTPEngineering-expertise-skills-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .SNTPEngineering-expertise-skill-card {
+    padding: 35px 25px;
+  }
+
+  .SNTPEngineering-expertise-hero-item {
+    padding: 18px 20px;
+  }
+
+  .SNTPEngineering-expertise-hero-item span {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .SNTPEngineering-expertise-modern-section {
+    padding: 60px 15px;
+  }
+
+  .SNTPEngineering-expertise-modern-title {
+    font-size: 2.2rem;
+  }
+
+  .SNTPEngineering-expertise-hero {
+    padding: 35px 20px;
+  }
+
+  .SNTPEngineering-expertise-skill-card {
+    padding: 30px 20px;
+  }
+
+  .SNTPEngineering-expertise-skill-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .SNTPEngineering-expertise-skill-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .SNTPEngineering-expertise-skill-list li {
+    font-size: 1rem;
+    padding: 14px 0 14px 28px;
+  }
+}
+/* ==================== ÉQUIPE HAUTEMENT QUALIFIÉE - DESIGN MODERNE ==================== */
+
+.SNTPEngineering-team-modern-section {
+  padding: 120px 40px;
+  background: linear-gradient(135deg, var(--sntp-black) 0%, var(--sntp-gray-dark) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.SNTPEngineering-team-modern-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(193, 18, 31, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+/* Header */
+.SNTPEngineering-team-modern-header {
+  text-align: center;
+  margin-bottom: 80px;
+  position: relative;
+  z-index: 1;
+}
+
+.SNTPEngineering-team-modern-badge {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, var(--sntp-red), var(--sntp-red-dark));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 35px;
+  box-shadow: 0 15px 40px rgba(193, 18, 31, 0.5);
+  animation: float 3s ease-in-out infinite;
+}
+
+.SNTPEngineering-team-modern-badge svg {
+  color: var(--sntp-white);
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.SNTPEngineering-team-modern-title {
+  font-size: clamp(2.5rem, 4.5vw, 4rem);
+  color: var(--sntp-white);
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.SNTPEngineering-team-modern-underline {
+  width: 150px;
+  height: 5px;
+  background: linear-gradient(90deg, var(--sntp-red), var(--sntp-red-dark));
+  margin: 0 auto 30px;
+  border-radius: 3px;
+  box-shadow: 0 4px 20px rgba(193, 18, 31, 0.6);
+}
+
+.SNTPEngineering-team-modern-subtitle {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 400;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+/* ==================== GRILLE DES CARTES ==================== */
+
+.SNTPEngineering-team-modern-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 35px;
+  max-width: 1400px;
+  margin: 0 auto 80px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ==================== CARDS ==================== */
+
+.SNTPEngineering-team-modern-card {
+  perspective: 1000px;
+  height: 280px;
+}
+
+.SNTPEngineering-team-modern-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: var(--sntp-white);
+  border-radius: 20px;
+  padding: 40px 35px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid rgba(193, 18, 31, 0.2);
+  overflow: hidden;
+}
+
+.SNTPEngineering-team-modern-card-inner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(193, 18, 31, 0.05) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+}
+
+.SNTPEngineering-team-modern-card:hover .SNTPEngineering-team-modern-card-inner {
+  transform: translateY(-15px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+  border-color: var(--sntp-red);
+}
+
+.SNTPEngineering-team-modern-card:hover .SNTPEngineering-team-modern-card-inner::before {
+  opacity: 1;
+}
+
+/* Icon Wrapper */
+.SNTPEngineering-team-modern-icon-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.SNTPEngineering-team-modern-icon {
+  width: 75px;
+  height: 75px;
+  background: linear-gradient(135deg, var(--sntp-gray-lighter), var(--sntp-gray-light));
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.SNTPEngineering-team-modern-card:hover .SNTPEngineering-team-modern-icon {
+  background: linear-gradient(135deg, var(--sntp-red), var(--sntp-red-dark));
+  transform: rotate(-10deg) scale(1.1);
+  box-shadow: 0 10px 30px rgba(193, 18, 31, 0.5);
+}
+
+.SNTPEngineering-team-modern-icon svg {
+  color: var(--sntp-black);
+  transition: color 0.3s ease;
+}
+
+.SNTPEngineering-team-modern-card:hover .SNTPEngineering-team-modern-icon svg {
+  color: var(--sntp-white);
+}
+
+.SNTPEngineering-team-modern-number {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--sntp-gray-lighter);
+  transition: color 0.3s ease;
+}
+
+.SNTPEngineering-team-modern-card:hover .SNTPEngineering-team-modern-number {
+  color: var(--sntp-red);
+}
+
+/* Card Title */
+.SNTPEngineering-team-modern-card-title {
+  font-size: 1.3rem;
+  color: var(--sntp-black);
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+.SNTPEngineering-team-modern-card:hover .SNTPEngineering-team-modern-card-title {
+  color: var(--sntp-gray-dark);
+}
+
+/* Card Bar */
+.SNTPEngineering-team-modern-card-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--sntp-red), var(--sntp-red-dark));
+  transition: width 0.5s ease;
+  border-radius: 0 3px 0 20px;
+}
+
+.SNTPEngineering-team-modern-card:hover .SNTPEngineering-team-modern-card-bar {
+  width: 100%;
+}
+
+/* ==================== STATS SECTION ==================== */
+
+.SNTPEngineering-team-modern-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  padding: 60px 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(193, 18, 31, 0.3);
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.SNTPEngineering-team-modern-stat {
+  text-align: center;
+}
+
+.SNTPEngineering-team-modern-stat-number {
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  font-weight: 900;
+  color: var(--sntp-red);
+  margin-bottom: 10px;
+  text-shadow: 0 4px 15px rgba(193, 18, 31, 0.5);
+}
+
+.SNTPEngineering-team-modern-stat-label {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.SNTPEngineering-team-modern-stat-divider {
+  width: 2px;
+  height: 80px;
+  background: linear-gradient(180deg, transparent, var(--sntp-red), transparent);
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width: 1024px) {
+  .SNTPEngineering-team-modern-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+  }
+
+  .SNTPEngineering-team-modern-stats {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .SNTPEngineering-team-modern-section {
+    padding: 80px 20px;
+  }
+
+  .SNTPEngineering-team-modern-header {
+    margin-bottom: 60px;
+  }
+
+  .SNTPEngineering-team-modern-badge {
+    width: 80px;
+    height: 80px;
+  }
+
+  .SNTPEngineering-team-modern-badge svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .SNTPEngineering-team-modern-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-bottom: 60px;
+  }
+
+  .SNTPEngineering-team-modern-card {
+    height: auto;
+    min-height: 260px;
+  }
+
+  .SNTPEngineering-team-modern-card-inner {
+    padding: 35px 25px;
+  }
+
+  .SNTPEngineering-team-modern-stats {
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 20px;
+  }
+
+  .SNTPEngineering-team-modern-stat-divider {
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--sntp-red), transparent);
+  }
+}
+
+@media (max-width: 480px) {
+  .SNTPEngineering-team-modern-section {
+    padding: 60px 15px;
+  }
+
+  .SNTPEngineering-team-modern-title {
+    font-size: 2rem;
+  }
+
+  .SNTPEngineering-team-modern-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .SNTPEngineering-team-modern-card-inner {
+    padding: 30px 20px;
+  }
+
+  .SNTPEngineering-team-modern-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .SNTPEngineering-team-modern-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .SNTPEngineering-team-modern-number {
+    font-size: 2rem;
+  }
+
+  .SNTPEngineering-team-modern-card-title {
+    font-size: 1.15rem;
+  }
+
+  .SNTPEngineering-team-modern-stat-number {
+    font-size: 2.5rem;
+  }
+
+  .SNTPEngineering-team-modern-stat-label {
+    font-size: 1rem;
+  }
+}
+/* ==================== TECHNOLOGIE & INNOVATION ==================== */
+
+.SNTPEngineering-tech-section {
+  padding: 120px 40px;
+  background: linear-gradient(180deg, var(--sntp-white) 0%, #FAFAFA 50%, var(--sntp-gray-lighter) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.SNTPEngineering-tech-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(193, 18, 31, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(0, 0, 0, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* ==================== HEADER AVEC ANIMATION ==================== */
+
+.SNTPEngineering-tech-header {
+  text-align: center;
+  margin-bottom: 90px;
+  position: relative;
+  z-index: 1;
+}
+
+.SNTPEngineering-tech-icon-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.SNTPEngineering-tech-icon-orbit {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+.SNTPEngineering-tech-icon-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90px;
+  height: 90px;
+  background: linear-gradient(135deg, var(--sntp-red), var(--sntp-red-dark));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 15px 50px rgba(193, 18, 31, 0.4);
+  animation: pulse-icon 2s ease-in-out infinite;
+}
+
+.SNTPEngineering-tech-icon-center svg {
+  color: var(--sntp-white);
+}
+
+@keyframes pulse-icon {
+  0%, 100% {
+    box-shadow: 0 15px 50px rgba(193, 18, 31, 0.4);
+  }
+  50% {
+    box-shadow: 0 15px 60px rgba(193, 18, 31, 0.6);
+  }
+}
+
+.SNTPEngineering-tech-orbit-dot {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: var(--sntp-red);
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(193, 18, 31, 0.8);
+}
+
+.SNTPEngineering-tech-orbit-dot-1 {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: orbit-1 3s linear infinite;
+}
+
+.SNTPEngineering-tech-orbit-dot-2 {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  animation: orbit-2 3s linear infinite;
+}
+
+.SNTPEngineering-tech-orbit-dot-3 {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: orbit-3 3s linear infinite;
+}
+
+@keyframes orbit-1 {
+  0%, 100% { top: 0; left: 50%; }
+  33% { top: 50%; right: 0; left: auto; }
+  66% { bottom: 0; top: auto; left: 50%; right: auto; }
+}
+
+@keyframes orbit-2 {
+  0%, 100% { top: 50%; right: 0; }
+  33% { bottom: 0; top: auto; left: 50%; right: auto; }
+  66% { top: 0; bottom: auto; left: 50%; }
+}
+
+@keyframes orbit-3 {
+  0%, 100% { bottom: 0; left: 50%; }
+  33% { top: 0; bottom: auto; left: 50%; }
+  66% { top: 50%; right: 0; left: auto; bottom: auto; }
+}
+
+.SNTPEngineering-tech-title {
+  font-size: clamp(2.5rem, 4.5vw, 4rem);
+  color: var(--sntp-black);
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.SNTPEngineering-tech-subtitle {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  color: var(--sntp-red);
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.SNTPEngineering-tech-underline {
+  width: 120px;
+  height: 5px;
+  background: linear-gradient(90deg, var(--sntp-red), var(--sntp-red-dark));
+  margin: 0 auto;
+  border-radius: 3px;
+  box-shadow: 0 4px 20px rgba(193, 18, 31, 0.4);
+}
+
+/* ==================== GRILLE DES TECHNOLOGIES ==================== */
+
+.SNTPEngineering-tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 35px;
+  max-width: 1400px;
+  margin: 0 auto 80px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ==================== CARDS TECHNOLOGIE ==================== */
+
+.SNTPEngineering-tech-card {
+  position: relative;
+  background: var(--sntp-white);
+  border-radius: 20px;
+  padding: 40px 35px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+  border: 2px solid var(--sntp-gray-lighter);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.SNTPEngineering-tech-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(193, 18, 31, 0.05), transparent);
+  transition: left 0.6s ease;
+}
+
+.SNTPEngineering-tech-card:hover::before {
+  left: 100%;
+}
+
+.SNTPEngineering-tech-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  border-color: var(--sntp-red);
+}
+
+.SNTPEngineering-tech-card-glow {
+  position: absolute;
+  bottom: -50%;
+  right: -50%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(193, 18, 31, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.SNTPEngineering-tech-card:hover .SNTPEngineering-tech-card-glow {
+  opacity: 1;
+}
+
+/* Card Header */
+.SNTPEngineering-tech-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.SNTPEngineering-tech-card-number {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--sntp-gray-lighter);
+  line-height: 1;
+  transition: all 0.3s ease;
+}
+
+.SNTPEngineering-tech-card:hover .SNTPEngineering-tech-card-number {
+  color: var(--sntp-red);
+  transform: scale(1.1);
+}
+
+.SNTPEngineering-tech-card-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, var(--sntp-gray-lighter), var(--sntp-gray-light));
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.SNTPEngineering-tech-card:hover .SNTPEngineering-tech-card-icon {
+  background: linear-gradient(135deg, var(--sntp-red), var(--sntp-red-dark));
+  transform: rotate(360deg) scale(1.05);
+  box-shadow: 0 8px 25px rgba(193, 18, 31, 0.4);
+}
+
+.SNTPEngineering-tech-card-icon svg {
+  color: var(--sntp-black);
+  transition: color 0.3s ease;
+}
+
+.SNTPEngineering-tech-card:hover .SNTPEngineering-tech-card-icon svg {
+  color: var(--sntp-white);
+}
+
+/* Card Content */
+.SNTPEngineering-tech-card-content {
+  position: relative;
+  z-index: 1;
+}
+
+.SNTPEngineering-tech-card-title {
+  font-size: 1.35rem;
+  color: var(--sntp-black);
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 25px;
+  transition: color 0.3s ease;
+}
+
+.SNTPEngineering-tech-card:hover .SNTPEngineering-tech-card-title {
+  color: var(--sntp-gray-dark);
+}
+
+/* Indicator Bar */
+.SNTPEngineering-tech-card-indicator {
+  width: 100%;
+  height: 6px;
+  background: var(--sntp-gray-lighter);
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+}
+
+.SNTPEngineering-tech-card-indicator-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--sntp-red), var(--sntp-red-dark));
+  border-radius: 3px;
+  width: 0;
+  transition: width 0.8s ease 0.2s;
+  box-shadow: 0 0 10px rgba(193, 18, 31, 0.5);
+}
+
+.SNTPEngineering-tech-card:hover .SNTPEngineering-tech-card-indicator-fill {
+  width: 100%;
+}
+
+/* ==================== BANNER INNOVATION ==================== */
+
+.SNTPEngineering-tech-banner {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, var(--sntp-black) 0%, var(--sntp-gray-dark) 100%);
+  border-radius: 25px;
+  padding: 60px 50px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  border: 3px solid var(--sntp-red);
+}
+
+.SNTPEngineering-tech-banner-pattern {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(193, 18, 31, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.SNTPEngineering-tech-banner-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.SNTPEngineering-tech-banner-icon {
+  width: 100px;
+  height: 100px;
+  background: var(--sntp-red);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 10px 30px rgba(193, 18, 31, 0.5);
+  animation: pulse-banner 2s ease-in-out infinite;
+}
+
+@keyframes pulse-banner {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.SNTPEngineering-tech-banner-icon svg {
+  color: var(--sntp-white);
+}
+
+.SNTPEngineering-tech-banner-text {
+  flex: 1;
+}
+
+.SNTPEngineering-tech-banner-title {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  color: var(--sntp-white);
+  font-weight: 800;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.SNTPEngineering-tech-banner-description {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width: 1024px) {
+  .SNTPEngineering-tech-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .SNTPEngineering-tech-section {
+    padding: 80px 20px;
+  }
+
+  .SNTPEngineering-tech-header {
+    margin-bottom: 70px;
+  }
+
+  .SNTPEngineering-tech-icon-orbit {
+    width: 120px;
+    height: 120px;
+  }
+
+  .SNTPEngineering-tech-icon-center {
+    width: 70px;
+    height: 70px;
+  }
+
+  .SNTPEngineering-tech-icon-center svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .SNTPEngineering-tech-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-bottom: 60px;
+  }
+
+  .SNTPEngineering-tech-card {
+    padding: 35px 25px;
+  }
+
+  .SNTPEngineering-tech-banner {
+    padding: 40px 30px;
+  }
+
+  .SNTPEngineering-tech-banner-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .SNTPEngineering-tech-banner-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .SNTPEngineering-tech-banner-icon svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .SNTPEngineering-tech-section {
+    padding: 60px 15px;
+  }
+
+  .SNTPEngineering-tech-title {
+    font-size: 2rem;
+  }
+
+  .SNTPEngineering-tech-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .SNTPEngineering-tech-card {
+    padding: 30px 20px;
+  }
+
+  .SNTPEngineering-tech-card-number {
+    font-size: 2.5rem;
+  }
+
+  .SNTPEngineering-tech-card-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .SNTPEngineering-tech-card-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .SNTPEngineering-tech-card-title {
+    font-size: 1.2rem;
+  }
+
+  .SNTPEngineering-tech-banner {
+    padding: 35px 20px;
+  }
+
+  .SNTPEngineering-tech-banner-title {
+    font-size: 1.5rem;
+  }
+
+  .SNTPEngineering-tech-banner-description {
+    font-size: 1rem;
+  }
+}
+/* ==================== PROPOSITION DE VALEUR ==================== */
+
+.SNTPEngineering-value-prop-section {
+  padding: 120px 40px;
+  background: linear-gradient(180deg, var(--sntp-gray-lighter) 0%, var(--sntp-white) 50%, #FAFAFA 100%);
+  position: relative;
+}
+
+/* Header Principal */
+.SNTPEngineering-value-prop-header {
+  text-align: center;
+  margin-bottom: 90px;
+}
+
+.SNTPEngineering-value-prop-main-title {
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  color: var(--sntp-black);
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.SNTPEngineering-value-prop-main-underline {
+  width: 150px;
+  height: 5px;
+  background: linear-gradient(90deg, var(--sntp-red), var(--sntp-red-dark));
+  margin: 0 auto;
+  border-radius: 3px;
+  box-shadow: 0 4px 20px rgba(193, 18, 31, 0.4);
+}
+
+/* ==================== BLOCS GÉNÉRAUX ==================== */
+
+.SNTPEngineering-value-prop-block {
+  max-width: 1400px;
+  margin: 0 auto 60px;
+  background: var(--sntp-white);
+  border-radius: 25px;
+  padding: 50px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--sntp-gray-lighter);
+  position: relative;
+  overflow: hidden;
+}
+
+.SNTPEngineering-value-prop-block::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, var(--sntp-red), var(--sntp-red-dark));
+}
+
+/* Bloc Primary (Maîtrise Totale) */
+.SNTPEngineering-value-prop-block-primary {
+  background: linear-gradient(135deg, var(--sntp-white) 0%, #FAFAFA 100%);
+  border-left: 6px solid var(--sntp-red);
+}
+
+/* Bloc Secondary (Performance) */
+.SNTPEngineering-value-prop-block-secondary {
+  background: var(--sntp-white);
+  border-left: 6px solid var(--sntp-black);
+}
+
+.SNTPEngineering-value-prop-block-secondary::before {
+  background: linear-gradient(90deg, var(--sntp-black), var(--sntp-gray-dark));
+}
+
+/* Header de Bloc */
+.SNTPEngineering-value-prop-block-header {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 45px;
+  padding-bottom: 30px;
+  border-bottom: 3px solid var(--sntp-gray-lighter);
+}
+
+.SNTPEngineering-value-prop-block-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--sntp-red), var(--sntp-red-dark));
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 8px 25px rgba(193, 18, 31, 0.4);
+}
+
+.SNTPEngineering-value-prop-block-secondary .SNTPEngineering-value-prop-block-icon {
+  background: linear-gradient(135deg, var(--sntp-black), var(--sntp-gray-dark));
+}
+
+.SNTPEngineering-value-prop-block-icon svg {
+  color: var(--sntp-white);
+}
+
+.SNTPEngineering-value-prop-block-title {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  color: var(--sntp-black);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.3;
+}
+
+/* ==================== CARDS (Maîtrise Totale) ==================== */
+
+.SNTPEngineering-value-prop-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.SNTPEngineering-value-prop-card {
+  background: var(--sntp-white);
+  padding: 30px 25px;
+  border-radius: 15px;
+  border-left: 5px solid var(--sntp-red);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.SNTPEngineering-value-prop-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(193, 18, 31, 0.05), transparent);
+  transition: width 0.4s ease;
+}
+
+.SNTPEngineering-value-prop-card:hover::before {
+  width: 100%;
+}
+
+.SNTPEngineering-value-prop-card:hover {
+  transform: translateX(8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  border-left-width: 8px;
+}
+
+.SNTPEngineering-value-prop-card-marker {
+  width: 12px;
+  height: 12px;
+  background: var(--sntp-red);
+  border-radius: 50%;
+  margin-bottom: 15px;
+  box-shadow: 0 0 15px rgba(193, 18, 31, 0.6);
+}
+
+.SNTPEngineering-value-prop-card-title {
+  font-size: 1.2rem;
+  color: var(--sntp-black);
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  z-index: 1;
+}
+
+/* ==================== GRID (Performance) ==================== */
+
+.SNTPEngineering-value-prop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.SNTPEngineering-value-prop-item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 30px;
+  background: var(--sntp-gray-lighter);
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.SNTPEngineering-value-prop-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.03));
+  transition: width 0.4s ease;
+}
+
+.SNTPEngineering-value-prop-item:hover::before {
+  width: 100%;
+}
+
+.SNTPEngineering-value-prop-item:hover {
+  background: var(--sntp-white);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.SNTPEngineering-value-prop-item-number {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--sntp-red);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.SNTPEngineering-value-prop-item-content {
+  flex: 1;
+}
+
+.SNTPEngineering-value-prop-item-title {
+  font-size: 1.25rem;
+  color: var(--sntp-black);
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.SNTPEngineering-value-prop-item-line {
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--sntp-black), var(--sntp-gray-dark));
+  transition: width 0.5s ease 0.2s;
+  border-radius: 2px;
+}
+
+.SNTPEngineering-value-prop-item:hover .SNTPEngineering-value-prop-item-line {
+  width: 80px;
+}
+
+/* ==================== SYNERGIE STRATÉGIQUE ==================== */
+
+.SNTPEngineering-value-prop-synergy {
+  max-width: 1400px;
+  margin: 80px auto 0;
+  background: linear-gradient(135deg, var(--sntp-black) 0%, var(--sntp-gray-dark) 100%);
+  border-radius: 25px;
+  padding: 60px 50px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  border: 3px solid var(--sntp-red);
+}
+
+.SNTPEngineering-value-prop-synergy-pattern {
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(193, 18, 31, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.SNTPEngineering-value-prop-synergy-content {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.SNTPEngineering-value-prop-synergy-badge {
+  width: 120px;
+  height: 120px;
+  background: var(--sntp-red);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 15px 40px rgba(193, 18, 31, 0.6);
+  animation: rotate-badge 10s linear infinite;
+}
+
+@keyframes rotate-badge {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.SNTPEngineering-value-prop-synergy-badge svg {
+  color: var(--sntp-white);
+}
+
+.SNTPEngineering-value-prop-synergy-text {
+  flex: 1;
+}
+
+.SNTPEngineering-value-prop-synergy-title {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  color: var(--sntp-white);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.SNTPEngineering-value-prop-synergy-intro {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.SNTPEngineering-value-prop-synergy-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.SNTPEngineering-value-prop-synergy-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 25px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border-left: 4px solid var(--sntp-red);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.SNTPEngineering-value-prop-synergy-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateX(10px);
+  border-left-width: 6px;
+}
+
+.SNTPEngineering-value-prop-synergy-icon {
+  width: 35px;
+  height: 35px;
+  background: var(--sntp-red);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.SNTPEngineering-value-prop-synergy-icon svg {
+  color: var(--sntp-white);
+}
+
+.SNTPEngineering-value-prop-synergy-item span {
+  color: var(--sntp-white);
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width: 1024px) {
+  .SNTPEngineering-value-prop-cards {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .SNTPEngineering-value-prop-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .SNTPEngineering-value-prop-section {
+    padding: 80px 20px;
+  }
+
+  .SNTPEngineering-value-prop-header {
+    margin-bottom: 60px;
+  }
+
+  .SNTPEngineering-value-prop-block {
+    padding: 35px 25px;
+    margin-bottom: 40px;
+  }
+
+  .SNTPEngineering-value-prop-block-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .SNTPEngineering-value-prop-block-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .SNTPEngineering-value-prop-cards,
+  .SNTPEngineering-value-prop-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .SNTPEngineering-value-prop-synergy {
+    padding: 40px 30px;
+    margin-top: 60px;
+  }
+
+  .SNTPEngineering-value-prop-synergy-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 35px;
+  }
+
+  .SNTPEngineering-value-prop-synergy-badge {
+    width: 100px;
+    height: 100px;
+  }
+
+  .SNTPEngineering-value-prop-synergy-badge svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .SNTPEngineering-value-prop-section {
+    padding: 60px 15px;
+  }
+
+  .SNTPEngineering-value-prop-main-title {
+    font-size: 2.2rem;
+  }
+
+  .SNTPEngineering-value-prop-block {
+    padding: 30px 20px;
+  }
+
+  .SNTPEngineering-value-prop-block-title {
+    font-size: 1.5rem;
+  }
+
+  .SNTPEngineering-value-prop-card {
+    padding: 25px 20px;
+  }
+
+  .SNTPEngineering-value-prop-item {
+    padding: 25px 20px;
+  }
+
+  .SNTPEngineering-value-prop-item-number {
+    font-size: 2rem;
+  }
+
+  .SNTPEngineering-value-prop-synergy {
+    padding: 35px 20px;
+  }
+
+  .SNTPEngineering-value-prop-synergy-title {
+    font-size: 1.6rem;
+  }
+
+  .SNTPEngineering-value-prop-synergy-intro {
+    font-size: 1.1rem;
+  }
+
+  .SNTPEngineering-value-prop-synergy-item span {
+    font-size: 1rem;
+  }
+}
+/* ==================== AVANTAGES COMPÉTITIFS MAJEURS ==================== */
+
+.SNTPEngineering-advantages-section {
+  padding: 120px 40px;
+  background: linear-gradient(180deg, #FAFAFA 0%, var(--sntp-white) 50%, var(--sntp-gray-lighter) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.SNTPEngineering-advantages-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 15% 25%, rgba(193, 18, 31, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 85% 75%, rgba(0, 0, 0, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* ==================== HEADER PRINCIPAL ==================== */
+
+.SNTPEngineering-advantages-header {
+  text-align: center;
+  margin-bottom: 90px;
+  position: relative;
+  z-index: 1;
+}
+
+.SNTPEngineering-advantages-badge-wrapper {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 40px;
+}
+
+.SNTPEngineering-advantages-badge {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, var(--sntp-red), var(--sntp-red-dark));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 15px 50px rgba(193, 18, 31, 0.5);
+  z-index: 2;
+  animation: float-badge 3s ease-in-out infinite;
+}
+
+@keyframes float-badge {
+  0%, 100% { transform: translate(-50%, -50%) translateY(0); }
+  50% { transform: translate(-50%, -50%) translateY(-10px); }
+}
+
+.SNTPEngineering-advantages-badge svg {
+  color: var(--sntp-white);
+}
+
+.SNTPEngineering-advantages-badge-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 3px solid var(--sntp-red);
+  border-radius: 50%;
+  opacity: 0.3;
+  animation: pulse-ring 2s ease-out infinite;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+.SNTPEngineering-advantages-main-title {
+  font-size: clamp(2.5rem, 4.5vw, 4rem);
+  color: var(--sntp-black);
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.SNTPEngineering-advantages-main-underline {
+  width: 150px;
+  height: 5px;
+  background: linear-gradient(90deg, var(--sntp-red), var(--sntp-red-dark));
+  margin: 0 auto;
+  border-radius: 3px;
+  box-shadow: 0 4px 20px rgba(193, 18, 31, 0.4);
+}
+
+/* ==================== BLOCS GÉNÉRAUX ==================== */
+
+.SNTPEngineering-advantages-block {
+  max-width: 1400px;
+  margin: 0 auto 60px;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.SNTPEngineering-advantages-block-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+/* Bloc Light (Excellence Intégrée) */
+.SNTPEngineering-advantages-block-light {
+  background: var(--sntp-white);
+  border: 3px solid var(--sntp-red);
+}
+
+.SNTPEngineering-advantages-block-light::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--sntp-red), var(--sntp-red-dark));
+}
+
+/* Bloc Dark (Expertise Technique) */
+.SNTPEngineering-advantages-block-dark {
+  background: linear-gradient(135deg, var(--sntp-black) 0%, var(--sntp-gray-dark) 100%);
+  border: 3px solid var(--sntp-gray);
+}
+
+.SNTPEngineering-advantages-block-dark::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  right: -20%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(193, 18, 31, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.SNTPEngineering-advantages-block-content {
+  padding: 60px 50px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ==================== HEADER DE BLOC ==================== */
+
+.SNTPEngineering-advantages-block-header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 50px;
+  padding-bottom: 35px;
+  border-bottom: 3px solid rgba(193, 18, 31, 0.2);
+}
+
+.SNTPEngineering-advantages-block-dark .SNTPEngineering-advantages-block-header {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.SNTPEngineering-advantages-block-icon-box {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.SNTPEngineering-advantages-block-icon {
+  width: 90px;
+  height: 90px;
+  background: linear-gradient(135deg, var(--sntp-red), var(--sntp-red-dark));
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(193, 18, 31, 0.4);
+  position: relative;
+  z-index: 2;
+}
+
+.SNTPEngineering-advantages-block-icon-light {
+  background: var(--sntp-white);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+}
+
+.SNTPEngineering-advantages-block-icon svg {
+  color: var(--sntp-white);
+}
+
+.SNTPEngineering-advantages-block-icon-light svg {
+  color: var(--sntp-red);
+}
+
+.SNTPEngineering-advantages-block-pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90px;
+  height: 90px;
+  border: 3px solid var(--sntp-red);
+  border-radius: 20px;
+  animation: pulse-box 2s ease-out infinite;
+}
+
+.SNTPEngineering-advantages-block-pulse-light {
+  border-color: var(--sntp-white);
+}
+
+@keyframes pulse-box {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.3);
+    opacity: 0;
+  }
+}
+
+.SNTPEngineering-advantages-block-title-wrapper {
+  flex: 1;
+}
+
+.SNTPEngineering-advantages-block-title {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  color: var(--sntp-black);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.SNTPEngineering-advantages-block-title-light {
+  color: var(--sntp-white);
+}
+
+.SNTPEngineering-advantages-block-subtitle {
+  font-size: 1.2rem;
+  color: var(--sntp-red);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.SNTPEngineering-advantages-block-subtitle-light {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ==================== LISTE D'ITEMS (Excellence Intégrée) ==================== */
+
+.SNTPEngineering-advantages-items-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+.SNTPEngineering-advantages-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 30px;
+  background: var(--sntp-gray-lighter);
+  border-radius: 15px;
+  border-left: 5px solid var(--sntp-red);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.SNTPEngineering-advantages-list-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(193, 18, 31, 0.05), transparent);
+  transition: width 0.4s ease;
+}
+
+.SNTPEngineering-advantages-list-item:hover::before {
+  width: 100%;
+}
+
+.SNTPEngineering-advantages-list-item:hover {
+  background: var(--sntp-white);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transform: translateX(10px);
+  border-left-width: 8px;
+}
+
+.SNTPEngineering-advantages-list-icon {
+  width: 45px;
+  height: 45px;
+  background: var(--sntp-red);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 5px 15px rgba(193, 18, 31, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+.SNTPEngineering-advantages-list-icon svg {
+  color: var(--sntp-white);
+}
+
+.SNTPEngineering-advantages-list-content {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.SNTPEngineering-advantages-list-title {
+  font-size: 1.3rem;
+  color: var(--sntp-black);
+  font-weight: 800;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.SNTPEngineering-advantages-list-text {
+  font-size: 1.05rem;
+  color: var(--sntp-gray-dark);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* ==================== TECH GRID (Expertise Technique) ==================== */
+
+.SNTPEngineering-advantages-tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.SNTPEngineering-advantages-tech-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px 30px;
+  border-radius: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.SNTPEngineering-advantages-tech-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+  transition: left 0.6s ease;
+}
+
+.SNTPEngineering-advantages-tech-card:hover::before {
+  left: 100%;
+}
+
+.SNTPEngineering-advantages-tech-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--sntp-red);
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.SNTPEngineering-advantages-tech-number {
+  font-size: 3rem;
+  font-weight: 900;
+  color: rgba(193, 18, 31, 0.3);
+  line-height: 1;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+.SNTPEngineering-advantages-tech-card:hover .SNTPEngineering-advantages-tech-number {
+  color: var(--sntp-red);
+}
+
+.SNTPEngineering-advantages-tech-icon {
+  width: 70px;
+  height: 70px;
+  background: rgba(193, 18, 31, 0.15);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  transition: all 0.3s ease;
+}
+
+.SNTPEngineering-advantages-tech-card:hover .SNTPEngineering-advantages-tech-icon {
+  background: var(--sntp-red);
+  transform: rotate(-5deg) scale(1.05);
+  box-shadow: 0 8px 25px rgba(193, 18, 31, 0.5);
+}
+
+.SNTPEngineering-advantages-tech-icon svg {
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.3s ease;
+}
+
+.SNTPEngineering-advantages-tech-card:hover .SNTPEngineering-advantages-tech-icon svg {
+  color: var(--sntp-white);
+}
+
+.SNTPEngineering-advantages-tech-title {
+  font-size: 1.35rem;
+  color: var(--sntp-white);
+  font-weight: 800;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.SNTPEngineering-advantages-tech-desc {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width: 1024px) {
+  .SNTPEngineering-advantages-items-list,
+  .SNTPEngineering-advantages-tech-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .SNTPEngineering-advantages-section {
+    padding: 80px 20px;
+  }
+
+  .SNTPEngineering-advantages-header {
+    margin-bottom: 70px;
+  }
+
+  .SNTPEngineering-advantages-badge-wrapper {
+    width: 120px;
+    height: 120px;
+  }
+
+  .SNTPEngineering-advantages-badge {
+    width: 85px;
+    height: 85px;
+  }
+
+  .SNTPEngineering-advantages-badge svg {
+    width: 38px;
+    height: 38px;
+  }
+
+  .SNTPEngineering-advantages-block-content {
+    padding: 40px 30px;
+  }
+
+  .SNTPEngineering-advantages-block-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+  }
+
+  .SNTPEngineering-advantages-block-icon {
+    width: 75px;
+    height: 75px;
+  }
+
+  .SNTPEngineering-advantages-items-list,
+  .SNTPEngineering-advantages-tech-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .SNTPEngineering-advantages-list-item {
+    padding: 25px 20px;
+  }
+
+  .SNTPEngineering-advantages-tech-card {
+    padding: 35px 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .SNTPEngineering-advantages-section {
+    padding: 60px 15px;
+  }
+
+  .SNTPEngineering-advantages-main-title {
+    font-size: 2rem;
+  }
+
+  .SNTPEngineering-advantages-block-content {
+    padding: 35px 20px;
+  }
+
+  .SNTPEngineering-advantages-block-title {
+    font-size: 1.6rem;
+  }
+
+  .SNTPEngineering-advantages-list-item {
+    padding: 22px 18px;
+  }
+
+  .SNTPEngineering-advantages-list-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .SNTPEngineering-advantages-list-title {
+    font-size: 1.15rem;
+  }
+
+  .SNTPEngineering-advantages-tech-card {
+    padding: 30px 20px;
+  }
+
+  .SNTPEngineering-advantages-tech-number {
+    font-size: 2.5rem;
+  }
+
+  .SNTPEngineering-advantages-tech-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .SNTPEngineering-advantages-tech-title {
+    font-size: 1.2rem;
+  }
+}
+/* ==================== MÉTHODOLOGIE & PROCESSUS - VERSION COMPACTE ==================== */
+
+.SNTPEngineering-methodology-section {
+  padding: 120px 40px;
+  background: linear-gradient(180deg, var(--sntp-white) 0%, #FAFAFA 50%, var(--sntp-gray-lighter) 100%);
+  position: relative;
+}
+
+/* ==================== HEADER ==================== */
+
+.SNTPEngineering-methodology-header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.SNTPEngineering-methodology-main-title {
+  font-size: clamp(2.5rem, 4.5vw, 4rem);
+  color: var(--sntp-black);
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.SNTPEngineering-methodology-main-underline {
+  width: 150px;
+  height: 5px;
+  background: linear-gradient(90deg, var(--sntp-red), var(--sntp-red-dark));
+  margin: 0 auto 30px;
+  border-radius: 3px;
+  box-shadow: 0 4px 20px rgba(193, 18, 31, 0.4);
+}
+
+.SNTPEngineering-methodology-subtitle {
+  font-size: 1.25rem;
+  color: var(--sntp-gray);
+  font-weight: 500;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ==================== GRILLE DES 2 CARTES ==================== */
+
+.SNTPEngineering-methodology-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ==================== CARDS ==================== */
+
+.SNTPEngineering-methodology-card {
+  background: var(--sntp-white);
+  border-radius: 25px;
+  padding: 45px 40px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  border: 3px solid var(--sntp-red);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.SNTPEngineering-methodology-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--sntp-red), var(--sntp-red-dark));
+}
+
+.SNTPEngineering-methodology-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Dark */
+.SNTPEngineering-methodology-card-dark {
+  background: linear-gradient(135deg, var(--sntp-black) 0%, var(--sntp-gray-dark) 100%);
+  border-color: var(--sntp-gray);
+}
+
+.SNTPEngineering-methodology-card-dark::before {
+  background: linear-gradient(90deg, var(--sntp-white), var(--sntp-gray-lighter));
+}
+
+.SNTPEngineering-methodology-card-dark::after {
+  content: '';
+  position: absolute;
+  top: -30%;
+  right: -20%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(193, 18, 31, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* ==================== CARD HEADER ==================== */
+
+.SNTPEngineering-methodology-card-header {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 35px;
+  padding-bottom: 30px;
+  border-bottom: 3px solid rgba(193, 18, 31, 0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.SNTPEngineering-methodology-card-dark .SNTPEngineering-methodology-card-header {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.SNTPEngineering-methodology-card-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--sntp-red), var(--sntp-red-dark));
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 10px 30px rgba(193, 18, 31, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.SNTPEngineering-methodology-card:hover .SNTPEngineering-methodology-card-icon {
+  transform: rotate(-10deg) scale(1.05);
+}
+
+.SNTPEngineering-methodology-card-icon-light {
+  background: var(--sntp-white);
+}
+
+.SNTPEngineering-methodology-card-icon svg {
+  color: var(--sntp-white);
+}
+
+.SNTPEngineering-methodology-card-icon-light svg {
+  color: var(--sntp-red);
+}
+
+.SNTPEngineering-methodology-card-title-wrapper {
+  flex: 1;
+}
+
+.SNTPEngineering-methodology-card-number {
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: var(--sntp-red);
+  margin-bottom: 8px;
+  letter-spacing: 2px;
+}
+
+.SNTPEngineering-methodology-card-number-light {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.SNTPEngineering-methodology-card-title {
+  font-size: clamp(1.4rem, 2vw, 1.8rem);
+  color: var(--sntp-black);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1.3;
+}
+
+.SNTPEngineering-methodology-card-title-light {
+  color: var(--sntp-white);
+}
+
+/* ==================== CARD CONTENT - LISTE ==================== */
+
+.SNTPEngineering-methodology-card-content {
+  position: relative;
+  z-index: 1;
+}
+
+.SNTPEngineering-methodology-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.SNTPEngineering-methodology-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 18px 20px;
+  background: var(--sntp-gray-lighter);
+  border-radius: 12px;
+  border-left: 4px solid var(--sntp-red);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.SNTPEngineering-methodology-list li::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(193, 18, 31, 0.05), transparent);
+  transition: width 0.4s ease;
+}
+
+.SNTPEngineering-methodology-list li:hover::before {
+  width: 100%;
+}
+
+.SNTPEngineering-methodology-list li:hover {
+  background: var(--sntp-white);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transform: translateX(10px);
+  border-left-width: 6px;
+}
+
+/* Liste Light (pour card dark) */
+.SNTPEngineering-methodology-list-light li {
+  background: rgba(255, 255, 255, 0.05);
+  border-left-color: var(--sntp-white);
+  backdrop-filter: blur(10px);
+}
+
+.SNTPEngineering-methodology-list-light li::before {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.05), transparent);
+}
+
+.SNTPEngineering-methodology-list-light li:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-left-color: var(--sntp-red);
+}
+
+/* Dots */
+.SNTPEngineering-methodology-list-dot {
+  width: 12px;
+  height: 12px;
+  background: var(--sntp-red);
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 5px;
+  box-shadow: 0 0 15px rgba(193, 18, 31, 0.6);
+  animation: pulse-dot 2s ease-in-out infinite;
+  position: relative;
+  z-index: 1;
+}
+
+.SNTPEngineering-methodology-list-dot-light {
+  background: var(--sntp-white);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+@keyframes pulse-dot {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+.SNTPEngineering-methodology-list li span {
+  font-size: 1.1rem;
+  color: var(--sntp-black);
+  font-weight: 600;
+  line-height: 1.5;
+  position: relative;
+  z-index: 1;
+}
+
+.SNTPEngineering-methodology-list-light li span {
+  color: var(--sntp-white);
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width: 1200px) {
+  .SNTPEngineering-methodology-grid {
+    gap: 30px;
+  }
+
+  .SNTPEngineering-methodology-card {
+    padding: 40px 35px;
+  }
+
+  .SNTPEngineering-methodology-list li {
+    padding: 16px 18px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .SNTPEngineering-methodology-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .SNTPEngineering-methodology-card-header {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 768px) {
+  .SNTPEngineering-methodology-section {
+    padding: 80px 20px;
+  }
+
+  .SNTPEngineering-methodology-header {
+    margin-bottom: 60px;
+  }
+
+  .SNTPEngineering-methodology-card {
+    padding: 35px 25px;
+  }
+
+  .SNTPEngineering-methodology-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .SNTPEngineering-methodology-card-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .SNTPEngineering-methodology-card-icon svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .SNTPEngineering-methodology-list {
+    gap: 15px;
+  }
+
+  .SNTPEngineering-methodology-list li {
+    padding: 15px 18px;
+  }
+
+  .SNTPEngineering-methodology-list li span {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .SNTPEngineering-methodology-section {
+    padding: 60px 15px;
+  }
+
+  .SNTPEngineering-methodology-main-title {
+    font-size: 2rem;
+  }
+
+  .SNTPEngineering-methodology-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .SNTPEngineering-methodology-card {
+    padding: 30px 20px;
+  }
+
+  .SNTPEngineering-methodology-card-title {
+    font-size: 1.3rem;
+  }
+
+  .SNTPEngineering-methodology-card-icon {
+    width: 65px;
+    height: 65px;
+  }
+
+  .SNTPEngineering-methodology-list li {
+    padding: 14px 16px;
+    gap: 15px;
+  }
+
+  .SNTPEngineering-methodology-list li span {
+    font-size: 1rem;
+  }
+
+  .SNTPEngineering-methodology-list-dot {
+    width: 10px;
+    height: 10px;
+  }
+}
+/* ==================== VISION STRATÉGIQUE 2026–2030 ==================== */
+
+.SNTPEngineering-vision-section {
+  padding: 120px 40px;
+  background: linear-gradient(135deg, var(--sntp-black) 0%, var(--sntp-gray-dark) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.SNTPEngineering-vision-section::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  right: -15%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(193, 18, 31, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: float-slow 8s ease-in-out infinite;
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-30px) scale(1.05); }
+}
+
+/* ==================== HEADER ==================== */
+
+.SNTPEngineering-vision-header {
+  text-align: center;
+  margin-bottom: 80px;
+  position: relative;
+  z-index: 1;
+}
+
+.SNTPEngineering-vision-year-badge {
+  display: inline-flex;
+  margin-bottom: 30px;
+  padding: 20px 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50px;
+  border: 2px solid var(--sntp-red);
+  backdrop-filter: blur(10px);
+}
+
+.SNTPEngineering-vision-year-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.SNTPEngineering-vision-year-from,
+.SNTPEngineering-vision-year-to {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--sntp-white);
+  text-shadow: 0 4px 15px rgba(193, 18, 31, 0.5);
+}
+
+.SNTPEngineering-vision-year-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: slide-arrow 1.5s ease-in-out infinite;
+}
+
+@keyframes slide-arrow {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(10px); }
+}
+
+.SNTPEngineering-vision-year-arrow svg {
+  color: var(--sntp-red);
+}
+
+.SNTPEngineering-vision-main-title {
+  font-size: clamp(2.5rem, 4.5vw, 4rem);
+  color: var(--sntp-white);
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.SNTPEngineering-vision-main-underline {
+  width: 150px;
+  height: 5px;
+  background: linear-gradient(90deg, var(--sntp-red), var(--sntp-red-dark));
+  margin: 0 auto 30px;
+  border-radius: 3px;
+  box-shadow: 0 4px 20px rgba(193, 18, 31, 0.6);
+}
+
+.SNTPEngineering-vision-subtitle {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ==================== HERO BANNER ==================== */
+
+.SNTPEngineering-vision-hero {
+  max-width: 1000px;
+  margin: 0 auto 70px;
+  text-align: center;
+  padding: 50px 40px;
+  background: rgba(193, 18, 31, 0.1);
+  border-radius: 25px;
+  border: 3px solid var(--sntp-red);
+  backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 1;
+}
+
+.SNTPEngineering-vision-hero-icon {
+  width: 100px;
+  height: 100px;
+  background: var(--sntp-red);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 30px;
+  box-shadow: 0 15px 50px rgba(193, 18, 31, 0.6);
+  animation: rotate-slow 10s linear infinite;
+}
+
+@keyframes rotate-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.SNTPEngineering-vision-hero-icon svg {
+  color: var(--sntp-white);
+}
+
+.SNTPEngineering-vision-hero-title {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  color: var(--sntp-white);
+  font-weight: 800;
+  line-height: 1.4;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+
+.SNTPEngineering-vision-hero-line {
+  width: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--sntp-red), var(--sntp-white), var(--sntp-red));
+  margin: 0 auto;
+  border-radius: 2px;
+  animation: expand-line 2s ease-out forwards;
+}
+
+@keyframes expand-line {
+  to { width: 300px; }
+}
+
+/* ==================== GRILLE DES OBJECTIFS ==================== */
+
+.SNTPEngineering-vision-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto 80px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ==================== CARDS ==================== */
+
+.SNTPEngineering-vision-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 40px 35px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.SNTPEngineering-vision-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+  transition: left 0.6s ease;
+}
+
+.SNTPEngineering-vision-card:hover::before {
+  left: 100%;
+}
+
+.SNTPEngineering-vision-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--sntp-red);
+  transform: translateY(-12px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.SNTPEngineering-vision-card-number {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: rgba(193, 18, 31, 0.3);
+  line-height: 1;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+.SNTPEngineering-vision-card:hover .SNTPEngineering-vision-card-number {
+  color: var(--sntp-red);
+  text-shadow: 0 0 30px rgba(193, 18, 31, 0.8);
+}
+
+.SNTPEngineering-vision-card-icon {
+  width: 75px;
+  height: 75px;
+  background: rgba(193, 18, 31, 0.15);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  transition: all 0.4s ease;
+}
+
+.SNTPEngineering-vision-card:hover .SNTPEngineering-vision-card-icon {
+  background: var(--sntp-red);
+  transform: rotate(-10deg) scale(1.1);
+  box-shadow: 0 10px 30px rgba(193, 18, 31, 0.6);
+}
+
+.SNTPEngineering-vision-card-icon svg {
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.3s ease;
+}
+
+.SNTPEngineering-vision-card:hover .SNTPEngineering-vision-card-icon svg {
+  color: var(--sntp-white);
+}
+
+.SNTPEngineering-vision-card-title {
+  font-size: 1.3rem;
+  color: var(--sntp-white);
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 25px;
+  min-height: 80px;
+}
+
+/* Progress Bar */
+.SNTPEngineering-vision-card-progress {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.SNTPEngineering-vision-card-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--sntp-red), var(--sntp-red-dark));
+  border-radius: 3px;
+  width: 0;
+  transition: width 1s ease 0.3s;
+  box-shadow: 0 0 15px rgba(193, 18, 31, 0.8);
+}
+
+.SNTPEngineering-vision-card:hover .SNTPEngineering-vision-card-progress-bar {
+  width: 100%;
+}
+
+/* ==================== TIMELINE ==================== */
+
+.SNTPEngineering-vision-timeline {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px 40px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 25px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 1;
+}
+
+.SNTPEngineering-vision-timeline-line {
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  right: 40px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--sntp-red), var(--sntp-white));
+  transform: translateY(-50%);
+  border-radius: 2px;
+  box-shadow: 0 0 20px rgba(193, 18, 31, 0.5);
+}
+
+.SNTPEngineering-vision-timeline-points {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.SNTPEngineering-vision-timeline-point {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.SNTPEngineering-vision-timeline-dot {
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.3);
+  border: 3px solid var(--sntp-white);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.SNTPEngineering-vision-timeline-point-active .SNTPEngineering-vision-timeline-dot {
+  width: 30px;
+  height: 30px;
+  background: var(--sntp-red);
+  border-color: var(--sntp-red);
+  box-shadow: 0 0 25px rgba(193, 18, 31, 0.8);
+  animation: pulse-timeline 2s ease-in-out infinite;
+}
+
+@keyframes pulse-timeline {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 25px rgba(193, 18, 31, 0.8);
+  }
+  50% {
+    transform: scale(1.2);
+    box-shadow: 0 0 35px rgba(193, 18, 31, 1);
+  }
+}
+
+.SNTPEngineering-vision-timeline-point:hover .SNTPEngineering-vision-timeline-dot {
+  background: var(--sntp-red);
+  border-color: var(--sntp-red);
+  transform: scale(1.3);
+  box-shadow: 0 0 20px rgba(193, 18, 31, 0.8);
+}
+
+.SNTPEngineering-vision-timeline-label {
+  font-size: 1.2rem;
+  color: var(--sntp-white);
+  font-weight: 700;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.SNTPEngineering-vision-timeline-point-active .SNTPEngineering-vision-timeline-label {
+  font-size: 1.4rem;
+  color: var(--sntp-red);
+  text-shadow: 0 0 20px rgba(193, 18, 31, 0.8);
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width: 1024px) {
+  .SNTPEngineering-vision-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .SNTPEngineering-vision-section {
+    padding: 80px 20px;
+  }
+
+  .SNTPEngineering-vision-header {
+    margin-bottom: 60px;
+  }
+
+  .SNTPEngineering-vision-year-badge {
+    padding: 15px 30px;
+  }
+
+  .SNTPEngineering-vision-year-from,
+  .SNTPEngineering-vision-year-to {
+    font-size: 2rem;
+  }
+
+  .SNTPEngineering-vision-year-arrow svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .SNTPEngineering-vision-hero {
+    padding: 40px 30px;
+    margin-bottom: 60px;
+  }
+
+  .SNTPEngineering-vision-hero-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .SNTPEngineering-vision-hero-icon svg {
+    width: 50px;
+    height: 50px;
+  }
+
+  .SNTPEngineering-vision-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 60px;
+  }
+
+  .SNTPEngineering-vision-card {
+    padding: 35px 25px;
+  }
+
+  .SNTPEngineering-vision-card-title {
+    min-height: auto;
+  }
+
+  .SNTPEngineering-vision-timeline {
+    padding: 40px 20px;
+  }
+
+  .SNTPEngineering-vision-timeline-line {
+    left: 20px;
+    right: 20px;
+  }
+
+  .SNTPEngineering-vision-timeline-label {
+    font-size: 1rem;
+  }
+
+  .SNTPEngineering-vision-timeline-point-active .SNTPEngineering-vision-timeline-label {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .SNTPEngineering-vision-section {
+    padding: 60px 15px;
+  }
+
+  .SNTPEngineering-vision-main-title {
+    font-size: 2rem;
+  }
+
+  .SNTPEngineering-vision-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .SNTPEngineering-vision-year-badge {
+    padding: 12px 25px;
+  }
+
+  .SNTPEngineering-vision-year-from,
+  .SNTPEngineering-vision-year-to {
+    font-size: 1.8rem;
+  }
+
+  .SNTPEngineering-vision-hero {
+    padding: 35px 20px;
+  }
+
+  .SNTPEngineering-vision-card {
+    padding: 30px 20px;
+  }
+
+  .SNTPEngineering-vision-card-number {
+    font-size: 3rem;
+  }
+
+  .SNTPEngineering-vision-card-icon {
+    width: 65px;
+    height: 65px;
+  }
+
+  .SNTPEngineering-vision-card-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .SNTPEngineering-vision-card-title {
+    font-size: 1.2rem;
+  }
+
+  .SNTPEngineering-vision-timeline {
+    padding: 35px 15px;
+  }
+
+  .SNTPEngineering-vision-timeline-line {
+    left: 15px;
+    right: 15px;
+  }
+
+  .SNTPEngineering-vision-timeline-dot {
+    width: 16px;
+    height: 16px;
+  }
+
+  .SNTPEngineering-vision-timeline-point-active .SNTPEngineering-vision-timeline-dot {
+    width: 24px;
+    height: 24px;
+  }
+
+  .SNTPEngineering-vision-timeline-label {
+    font-size: 0.95rem;
+  }
+
+  .SNTPEngineering-vision-timeline-point-active .SNTPEngineering-vision-timeline-label {
+    font-size: 1.1rem;
+  }
+}
+/* ==================== CHIFFRES CLÉS ==================== */
+
+.SNTPEngineering-stats-section {
+  padding: 120px 40px;
+  background: linear-gradient(180deg, var(--sntp-white) 0%, #FAFAFA 50%, var(--sntp-gray-lighter) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.SNTPEngineering-stats-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(193, 18, 31, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(0, 0, 0, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* ==================== HEADER ==================== */
+
+.SNTPEngineering-stats-header {
+  text-align: center;
+  margin-bottom: 80px;
+  position: relative;
+  z-index: 1;
+}
+
+.SNTPEngineering-stats-main-title {
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  color: var(--sntp-black);
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  position: relative;
+  display: inline-block;
+}
+
+.SNTPEngineering-stats-main-title::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--sntp-red), transparent);
+}
+
+.SNTPEngineering-stats-main-underline {
+  width: 150px;
+  height: 5px;
+  background: linear-gradient(90deg, var(--sntp-red), var(--sntp-red-dark));
+  margin: 0 auto;
+  border-radius: 3px;
+  box-shadow: 0 4px 20px rgba(193, 18, 31, 0.4);
+}
+
+/* ==================== GRILLE ==================== */
+
+.SNTPEngineering-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto 80px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ==================== CARDS ==================== */
+
+.SNTPEngineering-stats-card {
+  position: relative;
+  background: var(--sntp-white);
+  border-radius: 25px;
+  padding: 0;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  border: 3px solid var(--sntp-red);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.SNTPEngineering-stats-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--sntp-red), var(--sntp-red-dark));
+}
+
+.SNTPEngineering-stats-card:hover {
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Dark */
+.SNTPEngineering-stats-card-dark {
+  background: linear-gradient(135deg, var(--sntp-black) 0%, var(--sntp-gray-dark) 100%);
+  border-color: var(--sntp-gray);
+}
+
+.SNTPEngineering-stats-card-dark::before {
+  background: linear-gradient(90deg, var(--sntp-white), var(--sntp-gray-lighter));
+}
+
+.SNTPEngineering-stats-card-inner {
+  padding: 50px 40px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Glow Effect */
+.SNTPEngineering-stats-card-glow {
+  position: absolute;
+  bottom: -50%;
+  right: -50%;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(193, 18, 31, 0.2) 0%, transparent 70%);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.SNTPEngineering-stats-card:hover .SNTPEngineering-stats-card-glow {
+  opacity: 1;
+}
+
+/* ==================== ICON ==================== */
+
+.SNTPEngineering-stats-icon-wrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 35px;
+}
+
+.SNTPEngineering-stats-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, var(--sntp-red), var(--sntp-red-dark));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 15px 50px rgba(193, 18, 31, 0.4);
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+
+.SNTPEngineering-stats-card:hover .SNTPEngineering-stats-icon {
+  transform: translate(-50%, -50%) rotate(360deg) scale(1.1);
+  box-shadow: 0 20px 60px rgba(193, 18, 31, 0.6);
+}
+
+.SNTPEngineering-stats-icon-light {
+  background: var(--sntp-white);
+}
+
+.SNTPEngineering-stats-icon svg {
+  color: var(--sntp-white);
+}
+
+.SNTPEngineering-stats-icon-light svg {
+  color: var(--sntp-red);
+}
+
+/* Pulse Effect */
+.SNTPEngineering-stats-pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  border: 3px solid var(--sntp-red);
+  border-radius: 50%;
+  animation: pulse-stats 2s ease-out infinite;
+}
+
+.SNTPEngineering-stats-pulse-light {
+  border-color: var(--sntp-white);
+}
+
+@keyframes pulse-stats {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.4);
+    opacity: 0;
+  }
+}
+
+/* ==================== CONTENT ==================== */
+
+.SNTPEngineering-stats-content {
+  text-align: center;
+}
+
+.SNTPEngineering-stats-number-wrapper {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.SNTPEngineering-stats-number {
+  font-size: clamp(3.5rem, 6vw, 5rem);
+  font-weight: 900;
+  color: var(--sntp-red);
+  line-height: 1;
+  text-shadow: 0 4px 20px rgba(193, 18, 31, 0.3);
+}
+
+.SNTPEngineering-stats-number-light {
+  color: var(--sntp-white);
+  text-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
+}
+
+.SNTPEngineering-stats-plus,
+.SNTPEngineering-stats-percent {
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 900;
+  color: var(--sntp-red);
+}
+
+.SNTPEngineering-stats-plus-light {
+  color: var(--sntp-white);
+}
+
+.SNTPEngineering-stats-label {
+  font-size: 1.3rem;
+  color: var(--sntp-black);
+  font-weight: 700;
+  line-height: 1.5;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.SNTPEngineering-stats-label-light {
+  color: var(--sntp-white);
+}
+
+/* ==================== BANNER ==================== */
+
+.SNTPEngineering-stats-banner {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, var(--sntp-red) 0%, var(--sntp-red-dark) 100%);
+  border-radius: 25px;
+  padding: 50px 60px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  box-shadow: 0 20px 60px rgba(193, 18, 31, 0.4);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.SNTPEngineering-stats-banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.SNTPEngineering-stats-banner-icon {
+  width: 110px;
+  height: 110px;
+  background: var(--sntp-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  animation: rotate-banner 10s linear infinite;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes rotate-banner {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.SNTPEngineering-stats-banner-icon svg {
+  color: var(--sntp-red);
+}
+
+.SNTPEngineering-stats-banner-content {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.SNTPEngineering-stats-banner-title {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  color: var(--sntp-white);
+  font-weight: 800;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.SNTPEngineering-stats-banner-text {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+/* ==================== ANIMATION DES NOMBRES ==================== */
+
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.SNTPEngineering-stats-number {
+  animation: countUp 1s ease-out;
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width: 1200px) {
+  .SNTPEngineering-stats-grid {
+    gap: 35px;
+  }
+
+  .SNTPEngineering-stats-card-inner {
+    padding: 45px 35px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .SNTPEngineering-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .SNTPEngineering-stats-card:last-child {
+    grid-column: 1 / -1;
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .SNTPEngineering-stats-section {
+    padding: 80px 20px;
+  }
+
+  .SNTPEngineering-stats-header {
+    margin-bottom: 60px;
+  }
+
+  .SNTPEngineering-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 60px;
+  }
+
+  .SNTPEngineering-stats-card:last-child {
+    grid-column: 1;
+    max-width: 100%;
+  }
+
+  .SNTPEngineering-stats-card-inner {
+    padding: 40px 30px;
+  }
+
+  .SNTPEngineering-stats-icon-wrapper {
+    width: 100px;
+    height: 100px;
+  }
+
+  .SNTPEngineering-stats-icon {
+    width: 85px;
+    height: 85px;
+  }
+
+  .SNTPEngineering-stats-icon svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .SNTPEngineering-stats-banner {
+    padding: 40px 30px;
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .SNTPEngineering-stats-banner-icon {
+    width: 90px;
+    height: 90px;
+  }
+
+  .SNTPEngineering-stats-banner-icon svg {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  .SNTPEngineering-stats-section {
+    padding: 60px 15px;
+  }
+
+  .SNTPEngineering-stats-main-title {
+    font-size: 2.2rem;
+  }
+
+  .SNTPEngineering-stats-card-inner {
+    padding: 35px 25px;
+  }
+
+  .SNTPEngineering-stats-icon-wrapper {
+    width: 90px;
+    height: 90px;
+  }
+
+  .SNTPEngineering-stats-icon {
+    width: 75px;
+    height: 75px;
+  }
+
+  .SNTPEngineering-stats-icon svg {
+    width: 35px;
+    height: 35px;
+  }
+
+  .SNTPEngineering-stats-number {
+    font-size: 3.5rem;
+  }
+
+  .SNTPEngineering-stats-plus,
+  .SNTPEngineering-stats-percent {
+    font-size: 2rem;
+  }
+
+  .SNTPEngineering-stats-label {
+    font-size: 1.15rem;
+  }
+
+  .SNTPEngineering-stats-banner {
+    padding: 35px 20px;
+  }
+
+  .SNTPEngineering-stats-banner-title {
+    font-size: 1.5rem;
+  }
+
+  .SNTPEngineering-stats-banner-text {
+    font-size: 1.05rem;
+  }
+}
